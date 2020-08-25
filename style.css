@@ -1,0 +1,125 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    margin:0;
+}
+a{
+    text-decoration: none;
+
+}
+a:hover{
+    color:orange;
+}
+.grid-container{
+    display:grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height:100%;
+}
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(53, 55, 87);
+    color:white;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+.brand a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.header-links a{
+    color:white;
+    text-decoration: none;
+}
+.header-links a:hover{
+    color:orange;
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background: rgb(53, 55, 87);
+    color:white;
+}
+/*main page*/
+.products{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.products li{
+   /* flex:0 1 34rem;*/
+    margin: 1rem;
+    padding:0;
+    border-bottom:.1rem #c0c0c0 solid;
+    list-style-type: none;
+    
+
+}
+.product{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    
+}
+.product-image{
+    max-width: 20rem;
+    max-height:20rem;
+
+}
+.product-name{
+    font-size: 2rem;
+
+}
+.product-mat{
+    font-size:1.2rem;
+    color: #808080;
+}
+.product-price{
+    font-size:2.5rem;
+    font-weight:bold;
+    margin-bottom: 1rem;
+}
+
+/* side */
+.brand button{
+    font-size:2rem;
+    padding: .5rem;
+    background: none;
+    border: none;
+    color:white;
+}
+.sidebar{
+    position: fixed;
+    transform: translateX(-30rem);
+    width: 30rem;
+    background: lightgray;
+    height: 100%;
+}
+.sidebar.open{
+    transform: translateX(0);
+}
+.sidebar-close-button{
+    border-radius: 50%;
+    border: .1rem #000000 solid;
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+    font-size: 1rem;
+    padding-top: 0;
+    cursor: pointer;
+    position: absolute;
+    right: .5rem;
+    top: 1.5rem;
+
+}
